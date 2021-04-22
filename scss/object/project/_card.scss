@@ -1,0 +1,28 @@
+* {
+  border: solid red 1px;
+}
+
+.p-card {
+  background-color: $main-background;
+  height: 100vh;
+  padding: 200px calc((100% - 1440px) / 2);
+
+  &__inner {
+    @include responsive-width;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__left {
+    width: 50%;
+    background-color: $card-background;
+  }
+
+  &__right {
+    width: 50%;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}

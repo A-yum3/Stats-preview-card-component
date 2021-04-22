@@ -13,7 +13,8 @@
     />
 
     <title>Frontend Mentor | Stats preview card component</title>
-
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -26,31 +27,41 @@
     </style>
   </head>
   <body>
-    <section>
-      <div>
-        <div>
-          <h2>Get insights that help your business grow.</h2>
-          <p>
-            Discover the benefits of data analytics and make better decisions
-            regarding revenue, customer experience, and overall efficiency.
-          </p>
+    <section class="p-card">
+      <div class="p-card__inner">
+        <div class="p-card__left">
+          <div class="p-card__header">
+            <h2 class="p-card__title">
+              Get insights that help your business grow.
+            </h2>
+            <p class="p-card__p">
+              Discover the benefits of data analytics and make better decisions
+              regarding revenue, customer experience, and overall efficiency.
+            </p>
+          </div>
+          <div class="p-card__stats">
+            <div class="p-card__stat">
+              <h3 class="p-card__title--small">10k+</h3>
+              <p class="p-card__p">companies</p>
+            </div>
+            <div class="p-card__stat">
+              <h3 class="p-card__title--small">314</h3>
+              <p class="p-card__p">templates</p>
+            </div>
+            <div class="p-card__stat">
+              <h3 class="p-card__title--small">12m+</h3>
+              <p class="p-card__title">queries</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <div>
-            <h3>10k+</h3>
-            <p>companies</p>
-          </div>
-          <div>
-            <h3>314</h3>
-            <p>templates</p>
-          </div>
-          <div>
-            <h3>12m+</h3>
-            <p>queries</p>
-          </div>
-        </div>
+        <figure class="p-card__right">
+          <img
+            class="p-card__image"
+            src="./images/image-header-desktop.jpg"
+            alt=""
+          />
+        </figure>
       </div>
-      <figure><img src="./images/image-header-desktop.jpg" alt="" /></figure>
     </section>
 
     <div class="attribution">
