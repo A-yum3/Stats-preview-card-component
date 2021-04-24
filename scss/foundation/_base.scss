@@ -1,20 +1,25 @@
-body {
-  font-size: $font-size;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
 
-@mixin media-queries($key) {
-  @media (min-width: map-get($break-point, $key )) {
+// * {
+//   border: solid red 1px;
+// }
+
+@mixin sp {
+  @media screen and (max-width: 767px) {
     @content;
   }
 }
 
-@mixin responsive-width {
-  @include media-queries(more-sm) {
-    width: 375px;
+@mixin pc {
+  @media screen and (min-width: 768px) {
+    @content;
   }
-  @include media-queries(more-md) {
-    width: 1440px;
+}
+
+body {
+  @include pc {
+    padding: calc((100vh - 720px) / 2) calc((100% - 1300px) / 2);
   }
+
+  font-size: $font-size;
 }
